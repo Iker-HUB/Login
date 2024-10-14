@@ -12,8 +12,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.smb.jc_mylogin.model.User
 import kotlinx.coroutines.launch
 
-
-
 class LoginScreenViewModel : ViewModel() {
     // OJOO!!! DAR PERMISO INTERNET EN MANIFEST
     private val auth: FirebaseAuth = Firebase.auth //la estaremos usando a lo largo del proyecto

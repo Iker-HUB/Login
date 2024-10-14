@@ -236,7 +236,6 @@ fun LoginScreen(
     }
 }
 
-@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun UserForm(
     isCreateAccount: Boolean,
@@ -341,7 +340,6 @@ fun InputField(
     )
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PasswordInput(
     passwordState: MutableState<String>,

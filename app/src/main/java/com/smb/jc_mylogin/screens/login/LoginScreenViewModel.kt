@@ -58,8 +58,6 @@ class LoginScreenViewModel : ViewModel() {
             }
         }
 
-
-
     fun signInWithEmailAndPassword(email: String, password: String, home: () -> Unit) =
         viewModelScope.launch { //para que se ejecute en segundo plano
             try {
@@ -136,5 +134,4 @@ class LoginScreenViewModel : ViewModel() {
 
 
     }
-
 }

@@ -1,5 +1,7 @@
-package com.smb.jc_mylogin.screens
+package com.smb.jc_mylogin.screens.splash
 
+import android.view.animation.OvershootInterpolator
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,11 +15,13 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.google.firebase.auth.FirebaseAuth
 import com.smb.jc_mylogin.navigation.Screens
 import kotlinx.coroutines.delay
 
@@ -28,12 +32,12 @@ fun SplashScreen(navController: NavController) {
     //Text(text = "SplashScreen") //poner esto al principio
 
     //Animación
-    //val scale = remember{
-    //    androidx.compose.animation.core.Animatable(0f)
-    //}
+    /*val scale = remember{
+        androidx.compose.animation.core.Animatable(0f)
+    }*/
 
     LaunchedEffect(key1 = true) {
-        /* scale.animateTo(
+       /* scale.animateTo(
              targetValue = 0.9f,
              //comportamiento de la animacion - efecto rebote
              animationSpec = tween(durationMillis = 800,
@@ -42,11 +46,12 @@ fun SplashScreen(navController: NavController) {
                  })
          )*/
 
-        delay(1500)
+        delay(2000)
 
         navController.navigate(Screens.LoginScreen.name)  //poner esto al comienzo
-        //si ya está logueado el usuario no necesita autenticarse de nuevo // poner esto al final
-        /*        if (FirebaseAuth.getInstance().currentUser?.email.isNullOrEmpty()) {
+        //si ya está logueado el usuario no necesita autenticarse de nuevo
+        // poner esto al final
+                if (FirebaseAuth.getInstance().currentUser?.email.isNullOrEmpty()) {
                     navController.navigate(Screens.LoginScreen.name)
                 } else {
                     navController.navigate(Screens.HomeScreen.name) {
@@ -56,7 +61,7 @@ fun SplashScreen(navController: NavController) {
                             inclusive = true
                         }
                     }
-                }*/
+                }
     }
 
     val color = MaterialTheme.colorScheme.primary

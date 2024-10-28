@@ -87,7 +87,7 @@ fun LoginScreen(
 
     // Google
     // este token se consigue en Firebase->Proveedores de Acceso->Google->Conf del SKD->Id de cliente web
-    val token = "774269213723-e1gp33lgdmt2of27e7i90ikuq3p2s9vl.apps.googleusercontent.com"
+    val token = "102189252440-i2b5v33u25544iiispcsq8mn9nm93fm1.apps.googleusercontent.com"
     val context = LocalContext.current
     val launcher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts

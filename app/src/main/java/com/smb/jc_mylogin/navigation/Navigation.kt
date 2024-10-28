@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.smb.jc_mylogin.screens.SplashScreen
+import com.smb.jc_mylogin.screens.splash.SplashScreen
 import com.smb.jc_mylogin.screens.login.LoginScreen
 import com.smb.jc_mylogin.screens.home.Home
 
